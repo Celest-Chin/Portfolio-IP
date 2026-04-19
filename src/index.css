@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme {
     --font-heading: "Century Gothic", "Tw Cen MT", Futura, sans-serif;
     --font-sans: "Century Gothic", "Tw Cen MT", Futura, sans-serif;
     --font-chinese: "AR PL KaitiM GB", "文鼎中楷简", "Kaiti", "STKaiti", serif;
