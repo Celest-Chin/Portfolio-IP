@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { CONTACT } from "../data";
-import { Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const Footer = () => {
@@ -30,8 +29,8 @@ export const Footer = () => {
 
       // Simulated Data based on logic
       const baseTotal = 15420;
-      const baseVisitor = 8940;
-      const baseEngagement = 3240;
+      const baseVisitor = 8941;
+      const baseEngagement = 3256;
 
       setAnalytics({
         total: baseTotal + (hasViewedSession ? 0 : 1),
@@ -52,31 +51,44 @@ export const Footer = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#FFFFFF]">Let's Connect</h2>
-          <p className="text-[#A0A0A0] text-lg font-light max-w-xl mx-auto leading-relaxed">
-            {CONTACT.message}
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-[#FFFFFF]">Let's Connect</h2>
+          <p className="text-[#A0A0A0] text-lg font-light max-w-2xl mx-auto leading-relaxed mb-12">
+            Open to discussing innovative brand strategies, AI integration projects, or global marketing challenges. Let's start a conversation.
           </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
+            {/* Button 1: Download Resume */}
+            <motion.a
+              href="https://drive.google.com/file/d/1SiofPfqEqCD14_6PkuZNeadKUR6tfTBP/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border border-[#A0A0A0] text-[#A0A0A0] text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:border-[#007BFF] hover:text-[#007BFF] hover:shadow-[0_0_20px_rgba(0,123,255,0.3)] relative group overflow-hidden"
+            >
+              [ Download Resume ]
+            </motion.a>
+
+            {/* Button 2: LinkedIn Link */}
+            <motion.a
+              href={CONTACT.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -3 }}
+              className="text-[#A0A0A0] hover:text-[#007BFF] text-xs font-bold tracking-[0.2em] uppercase transition-all duration-500 relative group"
+            >
+              <span className="relative">
+                [ Connect on LinkedIn ]
+                <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-current transform scale-x-100 transition-transform duration-500" />
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
 
-        <div className="flex items-center justify-center mb-20">
-          <motion.a
-            href={CONTACT.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ y: -5 }}
-            className="flex flex-col items-center gap-4 text-[#A0A0A0] hover:text-[#007BFF] transition-all duration-500 group"
-          >
-            <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#007BFF] group-hover:bg-[#007BFF]/5 transition-all duration-500 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-              <Linkedin className="w-6 h-6" />
-            </div>
-            <span className="text-xs font-bold tracking-[0.3em] uppercase">Connect on LinkedIn</span>
-          </motion.a>
-        </div>
-
         {/* Exclusive Brand Signature Section */}
-        <div className="pt-20 border-t border-white/5 flex flex-col items-center">
+        <div className="pt-24 border-t border-white/5 flex flex-col items-center">
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             initial={{ opacity: 0, y: 10 }}
@@ -114,9 +126,9 @@ export const Footer = () => {
 
           {/* Background Metadata Analytics */}
           <div className="analytics-text uppercase flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <span>V-Total: {formatCount(analytics.total)}</span>
-            <span>R-Visitor: {formatCount(analytics.visitor)}</span>
-            <span>Engagement-Live: {formatCount(analytics.engagement)}</span>
+            <span>V-TOTAL: {formatCount(analytics.total)}</span>
+            <span>R-VISITOR: {formatCount(analytics.visitor)}</span>
+            <span>ENGAGEMENT-LIVE: {formatCount(analytics.engagement)}</span>
           </div>
         </div>
       </div>
