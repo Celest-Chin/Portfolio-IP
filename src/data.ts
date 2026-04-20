@@ -185,7 +185,7 @@ export const SANDBOX_PROJECTS = {
       categories: ["Generative AI", "Interactive UI"],
       description: "An immersive, AI-generated 3D particle system. Guide particle movement in real-time by enabling your camera and using hand gestures.",
       descriptionZh: "由生成式 AI 驱动的沉浸式 3D 粒子系统。通过打开摄像头，连接手势动作引导粒子移动。",
-      link: "https://aistudio.google.com/apps/ee8f4bf4-0390-4eba-b57a-cd1ebccfe801?showPreview=true&showAssistant=true&project=gen-lang-client-0972383997"
+      link: "https://celest-chin.github.io/Interactive-Particles/"
     }
   ]
 };
