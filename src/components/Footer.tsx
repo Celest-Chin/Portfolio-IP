@@ -61,7 +61,7 @@ export const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
             {/* Button 1: Download Resume */}
             <motion.a
-              href="https://drive.google.com/file/d/1SiofPfqEqCD14_6PkuZNeadKUR6tfTBP/view?usp=drive_link"
+              href="https://drive.google.com/drive/folders/1BLW2ZfHgSWJHp-N7FgBeCNqypr2hQTd8?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
